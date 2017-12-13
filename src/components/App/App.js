@@ -3,7 +3,7 @@ import {
     Route,
     Switch,
 } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 import './App.scss';
 import Button from '../Button/Button';
 import {Footer} from '../Footer/Footer';

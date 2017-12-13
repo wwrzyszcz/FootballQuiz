@@ -2,7 +2,6 @@ import React from 'react';
 import {Footer} from '../Footer/Footer';
 import './Game.scss';
 import axios from 'axios';
-import tableArray from '../App/App';
 let teamsArray=[];
 export class Game extends React.Component {
     constructor(props) {
@@ -13,6 +12,54 @@ export class Game extends React.Component {
             randomTeams:[],
         }
     }
+    // próba ściągania do zmiennej
+    // getSerieA =()=> {
+    //     axios({
+    //         url: 'http://api.football-data.org/v1/competitions/456/teams ',
+    //         headers: {'X-Auth-Token': '92de6f5f95374fe4a539b170be10afc1'},
+    //         json: true
+    //     }).then((res) => teamsArray=teamsArray.concat(res.data.teams))};
+    // getPremiership=()=>{
+    //     axios({
+    //         url: 'http://api.football-data.org/v1/competitions/445/teams ',
+    //         headers: {'X-Auth-Token': '92de6f5f95374fe4a539b170be10afc1'},
+    //         json: true
+    //     }).then((res) => teamsArray=teamsArray.concat(res.data.teams))};
+    // getPrimeraDivision=()=>{
+    //     axios({
+    //         url: 'http://api.football-data.org/v1/competitions/455/teams ',
+    //         headers: {'X-Auth-Token': '92de6f5f95374fe4a539b170be10afc1'},
+    //         json: true
+    //     }).then((res) => teamsArray=teamsArray.concat(res.data.teams))};
+    // getBundesliga=()=> {
+    //     axios({
+    //         url: 'http://api.football-data.org/v1/competitions/452/teams ',
+    //         headers: {'X-Auth-Token': '92de6f5f95374fe4a539b170be10afc1'},
+    //         json: true
+    //     }).then((res) => teamsArray=teamsArray.concat(res.data.teams))};
+    // getLigue1=()=> {
+    //     axios({
+    //         url: 'http://api.football-data.org/v1/competitions/450/teams ',
+    //         headers: {'X-Auth-Token': '92de6f5f95374fe4a539b170be10afc1'},
+    //         json: true
+    //     }).then((res) => teamsArray=teamsArray.concat(res.data.teams))};
+    // getEredevisie=()=> {
+    //     axios({
+    //         url: 'http://api.football-data.org/v1/competitions/449/teams ',
+    //         headers: {'X-Auth-Token': '92de6f5f95374fe4a539b170be10afc1'},
+    //         json: true
+    //     }).then((res) => teamsArray=teamsArray.concat(res.data.teams));
+    //     console.log(res.data.teams);
+    // };
+
+    // componentWillMount() {
+    //     this.getEredevisie();
+    //     this.getLigue1();
+    //     this.getBundesliga();
+    //     this.getPrimeraDivision();
+    //     this.getPremiership();
+    //     this.getSerieA();
+    // }
     getSerieA =()=> {
         axios({
             url: 'http://api.football-data.org/v1/competitions/456/teams ',
@@ -119,7 +166,8 @@ export class Game extends React.Component {
     // }
 
     render(){
-        console.log(`${this.state.teams[99].crestUrl}`);
+        // console.log(teamsArray);
+        console.log(this.state.teams[99]);
         // console.log(teamsArray[5]);
     return (
             <div className={'game__content'}>
