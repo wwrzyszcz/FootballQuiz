@@ -3,6 +3,7 @@ import {
     Route,
     Switch,
 } from 'react-router-dom';
+// import axios from 'axios';
 import './App.scss';
 import Button from '../Button/Button';
 import {Footer} from '../Footer/Footer';
@@ -10,15 +11,17 @@ import {Contact} from '../Contact/Contact';
 import {HighScores} from '../HighScores/HighScores';
 import {Game} from '../Game/Game';
 
-
 export default class App extends React.Component{
-    constructor(props){
+
+    constructor(props) {
         super(props);
-        this.state={
-            value:"",
+        this.state = {
+            teams: [],
         }
     }
+
     render(){
+
      return(
         <div>
             <Switch>
@@ -26,7 +29,6 @@ export default class App extends React.Component{
                 <Route  exact path='/Contact' component={Contact}></Route>
                 <Route  exact path='/HighScores' component={HighScores}></Route>
                 <Route  exact path='/Game' component={Game}></Route>
-
             </Switch>
         </div>
      )

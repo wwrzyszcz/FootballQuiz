@@ -16,7 +16,7 @@ export class Footer extends React.Component{
         return(
             <footer>
                 <nav>
-                        <NavLink className={'navi__item'} exact to='/'>Game </NavLink>
+                        <NavLink className={'navi__item'} exact to='/'>Start </NavLink>
                         <NavLink className={'navi__item'} exact to='/HighScores'>HighScores </NavLink>
                         <NavLink className={'navi__item'} exact to='/Contact'>Contact </NavLink>
                 </nav>

@@ -1,43 +1,38 @@
 import React from 'react';
-import {
-    Route,
-    Switch
-} from 'react-router-dom';
 import {Footer} from '../Footer/Footer';
 import './Contact.scss';
 
 export class Contact extends React.Component {
-    constructor(porps) {
-        super(porps)
+    constructor(props) {
+        super(props);
         this.state = {
-            authorData: " ",
+            authorData: {},
         }
     }
-changeState(){
+changeState=()=>{
 this.setState({
-    authorData: Author,
+    authorData: author,
 })
+}
+componentDidMount(){
+    this.changeState();
 }
     render() {
         return (
-            <div className={'contact__content'} onLoad={this.changeState}>
-                <h1>Created by {this.state.name}</h1>
+            <div className={'contact__content'}>
                 <address>
-                    <span>{this.state.account}</span>
-                    <span>{this.state.mail}</span>
+                    <h1>Created by {this.state.authorData.name}</h1>
+                    <span><a href={this.state.authorData.account}>WWrzyszcz</a></span>
+                    <span><a href={this.state.authorData.mail}>Contact me</a></span>
                 </address>
                 <Footer/>
             </div>
         )
     }
 }
-
-const Author = [
-    {
+const author = {
         id: 1,
         name: 'WWrzyszcz',
-        account: 'www.github.com/wwrzyszcz',
-        mail: 'wrzyszcz.wojciech@gmail.com',
+        account:`http://www.github.com/wwrzyszcz`,
+        mail: 'mailto:wrzyszcz.wojciech@gmail.com',
     }
-
-]
