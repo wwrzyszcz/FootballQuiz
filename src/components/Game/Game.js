@@ -98,6 +98,7 @@ export class Game extends React.Component {
     //         <div>
     //             <div className={'img__square'} style={{'backgroundImage':this.state.goodAnswer.crestUrl}}>Jaki to klub</div>;
     //             <div className={'answers__square'}>
+    //  tutaj wyrenderuję np. guziki po kliknięciu w które przechodzimy do następnego okna i dodamy punkt przy poprawnej odpowiedzi.
     //                 <ul>`${this.state.randomTeams.name[0]}`</ul>
     //                 <ul>${this.state.randomTeams.name[1]}</ul>
     //                 <ul>${this.state.randomTeams.name[2]}</ul>
