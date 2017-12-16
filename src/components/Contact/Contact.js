@@ -14,12 +14,18 @@ this.setState({
     authorData: author,
 })
 }
+mouseEnter = (e)=>{
+    e.target.classList.add("hoveredContact");
+};
+mouseLeave = (e)=>{
+    e.target.classList.remove("hoveredContact");
+};
 componentDidMount(){
     this.changeState();
 }
     render() {
         return (
-            <div className={'contact__content'}>
+            <div className={'contact__content'} onMouseOver={this.mouseEnter} onMouseOut={this.mouseLeave}>
                 <address>
                     <h1>Created by {this.state.authorData.name}</h1>
                     <span><a href={this.state.authorData.account}>WWrzyszcz</a></span>

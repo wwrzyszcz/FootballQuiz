@@ -15,7 +15,7 @@
   height:30%;
   border:1px solid white;
 }
-answer__square{
+.answer__square{
   box-sizing:border-box;
   position: relative;
   top: 70%;
@@ -24,4 +24,12 @@ answer__square{
   width:30%;
   height:30%;
   border:1px solid white;
+}
+.question {
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  position: relative;
+  top:random(50) + %;
+  left:random(50)+ %;
 }
