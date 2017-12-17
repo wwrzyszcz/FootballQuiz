@@ -11,6 +11,7 @@ import {Contact} from '../Contact/Contact';
 import {HighScores} from '../HighScores/HighScores';
 import {Game} from '../Game/Game';
 import {Data} from '../Data/Data';
+import {Result} from '../Result/Result';
 export default class App extends React.Component{
 
     constructor(props) {
@@ -29,7 +30,7 @@ export default class App extends React.Component{
                 <Route  exact path='/Contact' component={Contact}></Route>
                 <Route  exact path='/HighScores' component={HighScores}></Route>
                 <Route  exact path='/Game' component={Game}></Route>
-                <Route  exact path='/Data' component={Data}></Route>
+                <Route  exact path='/Result' component={Result}></Route>
             </Switch>
         </div>
      )

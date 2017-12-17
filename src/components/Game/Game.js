@@ -16,6 +16,7 @@ export class Game extends React.Component {
             counter:[],
             score:[],
             answers:[],
+            image:[],
         }
     }
 
@@ -52,29 +53,40 @@ export class Game extends React.Component {
             }, () => this.setState({
                 goodAnswer: this.state.goodAnswer.concat(this.state.randomTeams[Math.round(Math.random() * this.state.randomTeams.length)])
             }, () =>  { if(this.state.goodAnswer) {
+                this.setState({
+                    image:this.state.goodAnswer.crestUrl
+                });
                 let img = document.getElementsByClassName('img__square');
-                img[0].style.backgroundImage = this.state.goodAnswer.crestUrl;
+                img[0].style.backgroundImage = this.state.img;
                 let questionMark= document.createElement("div");
                 questionMark.classList.add('question');
                 img[0].appendChild(questionMark);
-                console.log(this.state.goodAnswer);
+                console.log('to jest good answer', this.state.goodAnswer);
             }}, () => this.setState({
                 answers: this.state.answers.concat(this.state.randomTeams.map(answer => answer.name))
-            }, () => console.log(this.state.randomTeams))));
+            }, () => console.log(this.state.answers))));
         }));
     componentDidMount(){
         this.getTeams();
 
         // 10. wołamy getTeams() gdy mountowany jest komponent
     }
-    // buttonClick=()=> {
-    //     if(this.state.counter < 9){
-    //         this.setState({
-    //             counter: this.state.counter++;
-    //     }),
-    //         //od nowa renderowanie obrazka i odopowiedzi.
-    //     }
-    // };
+    buttonClick =(e)=> {
+        if(this.state.counter < 9){
+           this.getTeams();
+           this.setState({
+               counter:this.state.counter+1
+           });
+           if (e.target.value === this.state.goodAnswer.name){
+            this.setState({
+                score:this.state.score +1
+            })
+           }
+
+        }else {
+            this.props.history.push("/Result");
+        }
+    };
    //  od nowa renderowanie obrazka i odpowiedzi.
    //  };
    //  pętla 10 pytań plus po 10 pokaż div z counterem;
@@ -93,13 +105,13 @@ export class Game extends React.Component {
 
         return (
             <div className='game__content'>
-                <div className='img__square' onClick={this.imageRender}>
-                </div>
+                {this.state.answers.length && console.log(this.state.answers[0].name, 'test')}
+                <div className='img__square'></div>
                 <div className='answers__square'>
-                    {/*<button onClick={this.buttonClick}>{this.state.randomTeams[0]}</button>*/}
-                    {/*<button onClick={this.buttonClick}>{this.state.randomTeams[1]}</button>*/}
-                    {/*<button onClick={this.buttonClick}>{this.state.randomTeams[2]}</button>*/}
-                    {/*<button onClick={this.buttonClick}>{this.state.randomTeams[3]}</button>*/}
+                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[0].name}</button>
+                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[1].name}</button>
+                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[2].name}</button>
+                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[3].name}</button>
                 </div>
                 <Footer/>
             </div>

@@ -25,8 +25,8 @@ componentDidMount(){
 }
     render() {
         return (
-            <div className={'contact__content'} onMouseOver={this.mouseEnter} onMouseOut={this.mouseLeave}>
-                <address>
+            <div className={'contact__content'} >
+                <address onMouseOver={this.mouseEnter} onMouseOut={this.mouseLeave}>
                     <h1>Created by {this.state.authorData.name}</h1>
                     <span><a href={this.state.authorData.account}>WWrzyszcz</a></span>
                     <span><a href={this.state.authorData.mail}>Contact me</a></span>
