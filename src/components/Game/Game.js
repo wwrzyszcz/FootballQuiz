@@ -62,12 +62,6 @@ export class Game extends React.Component {
                 answers: this.state.answers.concat(this.state.randomTeams.map(answer => answer.name))
             }, () => console.log(this.state.randomTeams))));
         }));
-
-    imageRender = ()=>{
-     };
-    answersRender =()=>{
-
-    };
     componentDidMount(){
         this.getTeams();
 
@@ -112,63 +106,3 @@ export class Game extends React.Component {
         )
     }
 }
-
-// componentWillMount(){
-//     // this.inputTeams();
-//     this.goodAnswer();
-//     this.drawList();
-//
-// }
-// clicked = (event)=>{
-//     event.target.style.backgroundImage=this.state.teams[0].logo;
-// }
-// inputImg =()=>{
-//     let img = document.createElement('div');
-//     img.style.backgroundImage=this.state.goodAnswer.logo;
-//     img.classList.add('img__square');
-//   return img
-// };
-// teamsArray=teamsArray.concat(this.state.teams);
-// let goodAnswer = teamsArray[Math.round(Math.random()*116)];
-// Pomysł na zrobienie funkcji losowania oddzielnie a w Draw list pętla for i od 0 do 3 z wykorzystaniem funkcji draw
-// draw =()=>{
-//     this.state.teams[Math.round(Math.random()*116)],
-
-// drawList =()=>{
-//    this.setState({
-//        randomTeams:this.randomTeams.concat([
-//            this.state.teams[Math.round(Math.random()*116)],
-//        this.state.teams[Math.round(Math.random()*116)],
-//        this.state.teams[Math.round(Math.random()*116)],
-//        this.state.teams[Math.round(Math.random()*116)]])
-//    })
-// //
-// };
-// //funkcja ustawiająca poprawną odpowiedź.
-
-// Funkcja mieszająca kolejność odpowiedzi dziękie czemu poprawna odpowiedź będzie na różnych pozycjach
-
-// gameRender = ()=>{
-//     return(
-//         <div>
-//             <div className={'img__square'} style={{'backgroundImage':this.state.goodAnswer.crestUrl}}>Jaki to klub</div>;
-//             <div className={'answers__square'}>
-//  tutaj wyrenderuję np. guziki po kliknięciu w które przechodzimy do następnego okna i dodamy punkt przy poprawnej odpowiedzi.
-//                 <ul>`${this.state.randomTeams.name[0]}`</ul>
-//                 <ul>${this.state.randomTeams.name[1]}</ul>
-//                 <ul>${this.state.randomTeams.name[2]}</ul>
-//                 <ul>${this.state.randomTeams.name[3]}</ul>
-//             </div>
-//
-//         </div>
-//     )
-// };
-//
-// componentDidMount(){
-//     //Mam problem z wstawieniem danych ściągniętych do zmiennej.
-//     this.state.teams=this.state.teams.push(this.state.teams);
-//     this.drawList();
-//     this.goodAnswer();
-//     // this.shuffle();
-//     // this.gameRender();
-// }
