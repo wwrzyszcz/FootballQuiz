@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 47);
@@ -3626,7 +3626,7 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(
-    _reactRouterDom.BrowserRouter,
+    _reactRouterDom.HashRouter,
     null,
     _react2.default.createElement(_App2.default, null)
 ), document.getElementById('app'));
@@ -26429,7 +26429,7 @@ exports = module.exports = __webpack_require__(7)(undefined);
 
 
 // module
-exports.push([module.i, ".game__content {\n  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n  width: 100vw;\n  height: 100vh;\n  background-image: url(" + __webpack_require__(124) + ");\n  background-size: cover;\n}\n\n.img__square {\n  box-sizing: border-box;\n  width: 50%;\n  height: 50%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.answer__square {\n  box-sizing: border-box;\n  width: 60%;\n  height: 60%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.question {\n  width: 50%;\n  height: 50%;\n  background-color: black;\n  position: relative;\n  top: 23%;\n  left: 45%;\n}\n\nbutton {\n  display: block;\n  padding: 1.5%;\n  width: 30%;\n  margin: 0 auto;\n}", ""]);
+exports.push([module.i, ".game__content {\n  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n  width: 100vw;\n  height: 100vh;\n  background-image: url(" + __webpack_require__(124) + ");\n  background-size: cover;\n}\n\n.img__square {\n  box-sizing: border-box;\n  width: 50%;\n  height: 50%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.answer__square {\n  box-sizing: border-box;\n  width: 60%;\n  height: 60%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.question {\n  width: 50%;\n  height: 50%;\n  background-color: black;\n  position: relative;\n  top: 49%;\n  left: 5%;\n}\n\nbutton {\n  display: block;\n  padding: 1.5%;\n  width: 30%;\n  margin: 0 auto;\n}", ""]);
 
 // exports
 
