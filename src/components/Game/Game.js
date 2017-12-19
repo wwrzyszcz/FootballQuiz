@@ -64,7 +64,7 @@ export class Game extends React.Component {
                 console.log('to jest good answer', this.state.goodAnswer);
             }}, () => this.setState({
                 answers: this.state.answers.concat(this.state.randomTeams.map(answer => answer.name))
-            }, () => console.log(this.state.answers))));
+            }, () => console.log(' to są odpowiedzi', this.state.answers))));
         }));
     componentDidMount(){
         this.getTeams();
@@ -82,21 +82,10 @@ export class Game extends React.Component {
                 score:this.state.score +1
             })
            }
-
         }else {
             this.props.history.push("/Result");
         }
     };
-   //  od nowa renderowanie obrazka i odpowiedzi.
-   //  };
-   //  pętla 10 pytań plus po 10 pokaż div z counterem;
-   //  shuffle=()=>{
-   //      funkcja do mieszania kolejności tablicy przed wyświetleniem
-   //  }
-
-
-
-
 
     render() {
         // this.state.teams.length && console.log(this.state.teams[9].crestUrl);

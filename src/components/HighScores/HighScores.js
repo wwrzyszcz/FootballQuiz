@@ -33,12 +33,6 @@ class TableRow extends React.Component{
     super(props)
     }
     render(){
-        return(
-        <tr>
-            {/*<td>{namePrompt}</td>*/}
-            {/*<td>{scorePrompt}</td>*/}
-        </tr>
-        )
     }
 }
 
