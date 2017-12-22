@@ -13,10 +13,10 @@ export class Game extends React.Component {
             teams: [],
             goodAnswer: [],
             randomTeams: [],
-            counter:[],
-            score:[],
+            counter:0,
+            score:0,
             answers:[],
-            image:[],
+            image:'',
         }
     }
 
@@ -54,53 +54,82 @@ export class Game extends React.Component {
                 goodAnswer: this.state.goodAnswer.concat(this.state.randomTeams[Math.round(Math.random() * this.state.randomTeams.length)])
             }, () =>  { if(this.state.goodAnswer) {
                 this.setState({
-                    image:this.state.goodAnswer.crestUrl
+                    image: this.state.image=this.state.goodAnswer[0].crestUrl
                 });
                 let img = document.getElementsByClassName('img__square');
-                img[0].style.backgroundImage = this.state.img;
+                img[0].style.backgroundImage= `url('${this.state.image}')`;
+                img[0].style.backgroundPosition="center";
+                img[0].style.backgroundRepeat="no-repeat";
                 let questionMark= document.createElement("div");
                 questionMark.classList.add('question');
                 img[0].appendChild(questionMark);
-                console.log('to jest good answer', this.state.goodAnswer);
-            }}, () => this.setState({
-                answers: this.state.answers.concat(this.state.randomTeams.map(answer => answer.name))
-            }, () => console.log(' to są odpowiedzi', this.state.answers))));
+                console.log('to jest good answer', this.state.goodAnswer, this.state.goodAnswer[0].crestUrl);
+                console.log('to jest img state', this.state.image);
+                console.log('to jest random teams', this.state.randomTeams[2].name);
+                let buttonsAnswers = document.getElementsByTagName('button');
+                buttonsAnswers[0].innerText = `${this.state.randomTeams[0].name}`;
+                buttonsAnswers[1].innerText = `${this.state.randomTeams[1].name}`;
+                buttonsAnswers[2].innerText = `${this.state.randomTeams[2].name}`;
+                buttonsAnswers[3].innerText = `${this.state.randomTeams[3].name}`;
+             }},
+                // () => {
+            //         if (this.state.randomTeams) {
+            //             this.setState({
+            //                 answers: this.state.answers.concat(this.state.randomTeams[0].name, this.state.randomTeams[1].name, this.state.randomTeams[2].name, this.state.randomTeams[3].name)
+            //                 // answers: this.state.answers.concat(this.state.randomTeams.map(answer => answer.name))this.state.randomTeams[1]
+            //             });
+            //         // let buttonsAnswers = document.getElementsByTagName('button');
+            //         // buttonsAnswers[0].innerHTML = `${this.state.answers[0]}`;
+            //         // buttonsAnswers[1].innerHTML = `${this.state.answers[1]}`;
+            //         // buttonsAnswers[2].innerHTML = `${this.state.answers[2]}`;
+            //         // buttonsAnswers[3].innerHTML = `${this.state.answers[3]}`;
+            //         // console.log(this.state.answers);
+            //
+            //     }}
+
+            ));
+
         }));
     componentDidMount(){
         this.getTeams();
 
         // 10. wołamy getTeams() gdy mountowany jest komponent
     }
-    buttonClick =(e)=> {
-        if(this.state.counter < 9){
-           this.getTeams();
+    buttonClick =()=> {
+        if(this.state.counter <= 8){
            this.setState({
                counter:this.state.counter+1
            });
-           if (e.target.value === this.state.goodAnswer.name){
+        if (event.target.textContent === this.state.goodAnswer[0].name){
             this.setState({
-                score:this.state.score +1
+                score: this.state.score +1
             })
            }
-        }else {
+           this.setState({
+            goodAnswer:[]
+            })
+            this.getTeams();
+        } else {
             this.props.history.push("/Result");
         }
+
     };
 
     render() {
         // this.state.teams.length && console.log(this.state.teams[9].crestUrl);
-        console.log( 'to jest log', this.state.randomTeams);
         // 11. sprawdzamy czy this.state.teams nie jest pusty (początkowy stan), jeśli nie jest - to logujemy go do konsoli, lub robimy już konkretne operacje ;)
+        console.log('to jest counter', this.state.counter);
+        console.log('to jest score', this.state.score);
 
         return (
             <div className='game__content'>
-                {this.state.answers.length && console.log(this.state.answers[0].name, 'test')}
+                {this.state.answers.length && console.log(this.state.answers[0], 'test')}
                 <div className='img__square'></div>
                 <div className='answers__square'>
-                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[0].name}</button>
-                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[1].name}</button>
-                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[2].name}</button>
-                    <button onClick={this.buttonClick}>{this.state.answers.length && this.state.answers[3].name}</button>
+                    <button onClick={this.buttonClick}></button>
+                    <button onClick={this.buttonClick}></button>
+                    <button onClick={this.buttonClick}></button>
+                    <button onClick={this.buttonClick}></button>
                 </div>
                 <Footer/>
             </div>

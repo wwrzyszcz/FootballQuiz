@@ -17,7 +17,6 @@ export class HighScores extends React.Component{
                     {/*<h1>Our current Champ: {pierwsza.pozycja z Tabeli}</h1>*/}
                     <table>
                         <thead>
-                            <tr>Best form the Bests</tr>
                         </thead>
                         <tbody>
                         <TableRow/>
@@ -33,6 +32,7 @@ class TableRow extends React.Component{
     super(props)
     }
     render(){
+        return null
     }
 }
 
