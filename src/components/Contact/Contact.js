@@ -14,12 +14,12 @@ this.setState({
     authorData: author,
 })
 }
-mouseEnter = (e)=>{
-    e.target.classList.add("hoveredContact");
-};
-mouseLeave = (e)=>{
-    e.target.classList.remove("hoveredContact");
-};
+// mouseEnter = (e)=>{
+//     e.target.classList.add("hoveredContact");
+// };
+// mouseLeave = (e)=>{
+//     e.target.classList.remove("hoveredContact");
+// };
 componentDidMount(){
     this.changeState();
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Footer} from '../Footer/Footer';
 import './Result.scss';
-// import this.state.score from '../Game/Game';
+import {Game} from '../Game/Game';
 
 export class Result extends React.Component {
     constructor(props) {
@@ -9,11 +9,14 @@ export class Result extends React.Component {
         this.state = {
            score: [],
         }
+
     }
     render() {
         return (
-            <div>
-                <div className={'result'}>{this.state.score}</div>
+            <div className='resultContent'>
+                <div className='result'>
+                    <h1> Congratulations Your Score:</h1>
+                </div>
                 <Footer/>
             </div>
         )

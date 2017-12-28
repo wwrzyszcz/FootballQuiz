@@ -60,9 +60,9 @@ export class Game extends React.Component {
                 img[0].style.backgroundImage= `url('${this.state.image}')`;
                 img[0].style.backgroundPosition="center";
                 img[0].style.backgroundRepeat="no-repeat";
-                let questionMark= document.createElement("div");
-                questionMark.classList.add('question');
-                img[0].appendChild(questionMark);
+                let questionMark= document.getElementsByClassName('questionSquare');
+                questionMark[0].classList.add('question');
+                // // img[0].appendChild(questionMark);
                 console.log('to jest good answer', this.state.goodAnswer, this.state.goodAnswer[0].crestUrl);
                 console.log('to jest img state', this.state.image);
                 console.log('to jest random teams', this.state.randomTeams[2].name);
@@ -95,12 +95,12 @@ export class Game extends React.Component {
 
         // 10. wołamy getTeams() gdy mountowany jest komponent
     }
-    buttonClick =()=> {
+    buttonClick =(e)=> {
         if(this.state.counter <= 8){
            this.setState({
                counter:this.state.counter+1
            });
-        if (event.target.textContent === this.state.goodAnswer[0].name){
+        if (e.target.textContent === this.state.goodAnswer[0].name){
             this.setState({
                 score: this.state.score +1
             })
@@ -108,11 +108,12 @@ export class Game extends React.Component {
            this.setState({
             goodAnswer:[]
             })
+            let removeQuestion = document.getElementsByClassName('questionSquare');
+            removeQuestion[0].classList.remove('question');
             this.getTeams();
         } else {
             this.props.history.push("/Result");
         }
-
     };
 
     render() {
@@ -124,7 +125,9 @@ export class Game extends React.Component {
         return (
             <div className='game__content'>
                 {this.state.answers.length && console.log(this.state.answers[0], 'test')}
-                <div className='img__square'></div>
+                <div className='img__square'>
+                    <div className='questionSquare'></div>
+                </div>
                 <div className='answers__square'>
                     <button onClick={this.buttonClick}></button>
                     <button onClick={this.buttonClick}></button>

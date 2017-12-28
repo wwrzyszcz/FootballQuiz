@@ -1,8 +1,13 @@
-.result {
-  box-sizing:border-box;
-  width:60%;
-  height:60%;
-  border:1px solid white;
-  display: block;
-  margin:0 auto;
+.resultContent {
+  width:100vw;
+  height:100vh;
+  background-image: url('/../../../img/StockSnap_POIHJNTKDB.jpg');
+  background-size: cover;
+}
+.result h1 {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  color:white;
+  font-size: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
 }
