@@ -20,12 +20,12 @@ export class Game extends React.Component {
         }
     }
 
-    getSerieA = () => axios.get('http://api.football-data.org/v1/competitions/456/teams', {headers: AUTH_TOKEN});
-    getPremiership = () => axios.get('http://api.football-data.org/v1/competitions/445/teams', {headers: AUTH_TOKEN});
-    getPrimeraDivision = () => axios.get('http://api.football-data.org/v1/competitions/455/teams', {headers: AUTH_TOKEN});
-    getBundesliga = () => axios.get('http://api.football-data.org/v1/competitions/452/teams', {headers: AUTH_TOKEN});
-    getLigue1 = () => axios.get('http://api.football-data.org/v1/competitions/450/teams', {headers: AUTH_TOKEN});
-    getEredevisie = () => axios.get('http://api.football-data.org/v1/competitions/449/teams', {headers: AUTH_TOKEN});
+    getSerieA = () => axios.get('https://api.football-data.org/v1/competitions/456/teams', {headers: AUTH_TOKEN});
+    getPremiership = () => axios.get('https://api.football-data.org/v1/competitions/445/teams', {headers: AUTH_TOKEN});
+    getPrimeraDivision = () => axios.get('https://api.football-data.org/v1/competitions/455/teams', {headers: AUTH_TOKEN});
+    getBundesliga = () => axios.get('https://api.football-data.org/v1/competitions/452/teams', {headers: AUTH_TOKEN});
+    getLigue1 = () => axios.get('https://api.football-data.org/v1/competitions/450/teams', {headers: AUTH_TOKEN});
+    getEredevisie = () => axios.get('https://api.football-data.org/v1/competitions/449/teams', {headers: AUTH_TOKEN});
     // 2. poszczególne gety straciły swoje .then() dlatego, że i tak nie chcemy procesować ich responsów oddzielnie
 
     getTeams = () => axios
@@ -112,6 +112,7 @@ export class Game extends React.Component {
             removeQuestion[0].classList.remove('question');
             this.getTeams();
         } else {
+            let finalscore = this.state.score;
             this.props.history.push("/Result");
         }
     };
