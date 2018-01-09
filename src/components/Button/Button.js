@@ -31,7 +31,7 @@ class Button extends React.Component{
             <div>
                     <button className={'button__main tooltip'} onClick={this.onClick} onMouseEnter={this.Joke} onMouseLeave={this.JokeReverse}>
                         Let's get started
-                        <span className={ 'tooltiptext'}>It might be better if U practise a bit before start:)</span>
+                        <span className={ 'tooltiptext'}>It might be better if U practise a bit before the start:)</span>
                     </button>
 
             </div>
