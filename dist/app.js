@@ -1,71 +1,71 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
 /******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 47);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+            /******/ 		__webpack_require__.d(getter, 'a', getter);
+        /******/ 		return getter;
+        /******/ 	};
+            /******/
+            /******/ 	// Object.prototype.hasOwnProperty.call
+            /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+            /******/
+            /******/ 	// __webpack_public_path__
+            /******/ 	__webpack_require__.p = "";
+        /******/
+        /******/ 	// Load entry module and return exports
+        /******/ 	return __webpack_require__(__webpack_require__.s = 47);
+        /******/ })
+            /************************************************************************/
+            /******/ ([
+                /* 0 */
+    /******/ (function(modules) { // webpackBootstrap
+        /******/ 	// The module cache
+        /******/ 	var installedModules = {};
+        /******/
+        /******/ 	// The require function
+        /******/ 	function __webpack_require__(moduleId) {
+            /******/
+            /******/ 		// Check if module is in cache
+            /******/ 		if(installedModules[moduleId]) {
+                /******/ 			return installedModules[moduleId].exports;
+                /******/ 		}
+            /******/ 		// Create a new module (and put it into the cache)
+            /******/ 		var module = installedModules[moduleId] = {
+                /******/ 			i: moduleId,
+                /******/ 			l: false,
+                /******/ 			exports: {}
+                /******/ 		};
+            /******/
+            /******/ 		// Execute the module function
+            /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+            /******/
+            /******/ 		// Flag the module as loaded
+            /******/ 		module.l = true;
+            /******/
+            /******/ 		// Return the exports of the module
+            /******/ 		return module.exports;
+            /******/ 	}
+        /******/
+        /******/
+        /******/ 	// expose the modules object (__webpack_modules__)
+        /******/ 	__webpack_require__.m = modules;
+        /******/
+        /******/ 	// expose the module cache
+        /******/ 	__webpack_require__.c = installedModules;
+        /******/
+        /******/ 	// define getter function for harmony exports
+        /******/ 	__webpack_require__.d = function(exports, name, getter) {
+            /******/ 		if(!__webpack_require__.o(exports, name)) {
+                /******/ 			Object.defineProperty(exports, name, {
+                    /******/ 				configurable: false,
+                    /******/ 				enumerable: true,
+                    /******/ 				get: getter
+                    /******/ 			});
+                /******/ 		}
+            /******/ 	};
+        /******/
+        /******/ 	// getDefaultExport function for compatibility with non-harmony modules
+        /******/ 	__webpack_require__.n = function(module) {
+            /******/ 		var getter = module && module.__esModule ?
+                /******/ 			function getDefault() { return module['default']; } :
+                /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
@@ -26565,35 +26565,7 @@ var Data = function (_React$Component) {
         value: function addOne() {
             this.setState({
                 counter: this.state.counter + 1
-            });
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {}
-    }, {
-        key: 'render',
-        value: function render() {
-            teamsArray = teamsArray.concat(this.state.teams);
-            console.log(teamsArray);
-            // console.log(teamsArray[5]);
-            return _react2.default.createElement(
-                'div',
-                { className: 'data__content' },
-                _react2.default.createElement(_Footer.Footer, null)
-            );
-        }
-    }]);
-
-    return Data;
-}(_react2.default.Component);
-
-// Pomysł na zrobienie funkcji losowania oddzielnie a w Draw list pętla for i od 0 do 3 z wykorzystaniem funkcji draw
-// draw =()=>{
-//     this.state.teams[Math.round(Math.random()*116)],
-
-// drawList =()=>{
-//    this.setState({
-//        randomTeams:this.randomTeams.concat([
+            }
 //            this.state.teams[Math.round(Math.random()*116)],
 //        this.state.teams[Math.round(Math.random()*116)],
 //        this.state.teams[Math.round(Math.random()*116)],
@@ -26749,117 +26721,145 @@ var Data = function (_React$Component) {
 // }
 
 
-exports.default = Data;
+            exports.default = Data;
 
-/***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
+            /***/ }),
+        /* 126 */
+        /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+        "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Result = undefined;
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+        exports.Result = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+        var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
+        var _react = __webpack_require__(0);
 
-var _react2 = _interopRequireDefault(_react);
+        var _react2 = _interopRequireDefault(_react);
 
-var _Footer = __webpack_require__(9);
+        var _Footer = __webpack_require__(9);
 
-__webpack_require__(127);
+        __webpack_require__(127);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+        function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+        function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+        function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+        function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // import this.state.score from '../Game/Game';
 
-var Result = exports.Result = function (_React$Component) {
-    _inherits(Result, _React$Component);
+        var Result = exports.Result = function (_React$Component) {
+            _inherits(Result, _React$Component);
 
-    function Result(props) {
-        _classCallCheck(this, Result);
+            function Result(props) {
+                _classCallCheck(this, Result);
 
-        var _this = _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this, props));
+                var _this = _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this, props));
 
-        _this.state = {
-            score: []
-        };
-        return _this;
-    }
+                _this.state = {
+                    score: []
+                };
+                return _this;
+            }
 
-    _createClass(Result, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'div',
-                    { className: 'result' },
-                    this.state.score
-                ),
-                _react2.default.createElement(_Footer.Footer, null)
-            );
-        }
-    }]);
+            _createClass(Result, [{
+                key: 'render',
+                value: function render() {
+                    return _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'result' },
+                            this.state.score
+                        ),
+                        _react2.default.createElement(_Footer.Footer, null)
+                    );
+                }
+            }]);
 
-    return Result;
-}(_react2.default.Component);
+            return Result;
+        }(_react2.default.Component);
 
-/***/ }),
-/* 127 */
-/***/ (function(module, exports, __webpack_require__) {
+        /***/ }),
+        /* 127 */
+        /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(128);
-if(typeof content === 'string') content = [[module.i, content, '']];
+        var content = __webpack_require__(128);
+        if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
-var transform;
+        var transform;
 
-var options = {"hmr":true}
-options.transform = transform
+        var options = {"hmr":true}
+        options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(8)(content, options);
-if(content.locals) module.exports = content.locals;
+        var update = __webpack_require__(8)(content, options);
+        if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./Result.scss", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./Result.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
+        if(false) {
+            // When the styles change, update the <style> tags
+            if(!content.locals) {
+                module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./Result.scss", function() {
+                    var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/resolve-url-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./Result.scss");
+                    if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+                    update(newContent);
+                });
+            }
+            // When the module is disposed, remove the <style> tags
+            module.hot.dispose(function() { update(); });
+        }
 
-/***/ }),
-/* 128 */
-/***/ (function(module, exports, __webpack_require__) {
+        /***/ }),
+        /* 128 */
+        /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(7)(undefined);
+        exports = module.exports = __webpack_require__(7)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".result {\n  box-sizing: border-box;\n  width: 60%;\n  height: 60%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}", ""]);
+        exports.push([module.i, ".result {\n  box-sizing: border-box;\n  width: 60%;\n  height: 60%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}", ""]);
 
 // exports
 
 
-/***/ })
-/******/ ]);
+        /***/ })
+    /******/ ]);
+});
+}
+}, {
+key: 'componentDidMount',
+value: function componentDidMount() {}
+}, {
+key: 'render',
+value: function render() {
+teamsArray = teamsArray.concat(this.state.teams);
+console.log(teamsArray);
+// console.log(teamsArray[5]);
+return _react2.default.createElement(
+'div',
+{ className: 'data__content' },
+_react2.default.createElement(_Footer.Footer, null)
+);
+}]);
+
+return Data;
+}(_react2.default.Component);
+
+// Pomysł na zrobienie funkcji losowania oddzielnie a w Draw list pętla for i od 0 do 3 z wykorzystaniem funkcji draw
+// draw =()=>{
+//     this.state.teams[Math.round(Math.random()*116)],
+
+// drawList =()=>{
+//    this.setState({
+//        randomTeams:this.randomTeams.concat([
