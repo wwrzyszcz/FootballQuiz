@@ -56,13 +56,15 @@ export class Game extends React.Component {
                 this.setState({
                     image: this.state.image=this.state.goodAnswer[0].crestUrl
                 });
+                const random = Math.round(Math.random()*10);
                 let img = document.getElementsByClassName('img__square');
                 img[0].style.backgroundImage= `url('${this.state.image}')`;
                 img[0].style.backgroundPosition="center";
                 img[0].style.backgroundRepeat="no-repeat";
                 let questionMark= document.getElementsByClassName('questionSquare');
                 questionMark[0].classList.add('question');
-                // // img[0].appendChild(questionMark);
+                questionMark[0].style.left=`${(random*4.5)}`+`%`;
+                questionMark[0].style.top=`${(random*3)}`+`%`;
                 console.log('to jest good answer', this.state.goodAnswer, this.state.goodAnswer[0].crestUrl);
                 console.log('to jest img state', this.state.image);
                 console.log('to jest random teams', this.state.randomTeams[2].name);
