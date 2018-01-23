@@ -4122,13 +4122,15 @@ var Game = exports.Game = function (_React$Component) {
                                 _this.setState({
                                     image: _this.state.image = _this.state.goodAnswer[0].crestUrl
                                 });
+                                var random = Math.round(Math.random() * 10);
                                 var img = document.getElementsByClassName('img__square');
                                 img[0].style.backgroundImage = 'url(\'' + _this.state.image + '\')';
                                 img[0].style.backgroundPosition = "center";
                                 img[0].style.backgroundRepeat = "no-repeat";
                                 var questionMark = document.getElementsByClassName('questionSquare');
                                 questionMark[0].classList.add('question');
-                                // // img[0].appendChild(questionMark);
+                                questionMark[0].style.left = '' + random * 4.5 + '%';
+                                questionMark[0].style.top = '' + random * 3 + '%';
                                 console.log('to jest good answer', _this.state.goodAnswer, _this.state.goodAnswer[0].crestUrl);
                                 console.log('to jest img state', _this.state.image);
                                 console.log('to jest random teams', _this.state.randomTeams[2].name);
@@ -27206,7 +27208,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".game__content {\n  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n  width: 100vw;\n  height: 100vh;\n  background-image: url(" + escape(__webpack_require__(140)) + ");\n  background-size: cover;\n}\n\n.img__square {\n  box-sizing: border-box;\n  width: 50%;\n  height: 50%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.answer__square {\n  box-sizing: border-box;\n  width: 60%;\n  height: 60%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.question {\n  width: 70%;\n  height: 50%;\n  background-image: url(" + escape(__webpack_require__(141)) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  position: relative;\n  top: random%;\n  left: random%;\n}\n\nbutton {\n  display: block;\n  padding: 1.2%;\n  width: 30%;\n  margin: 0 auto;\n  color: #F7F0F0;\n  border-radius: 12px 12px 12px 12px;\n  font-family: Comic Sans MS, serif;\n  font-size: 1.2REM;\n  box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;\n  background-image: linear-gradient(to top, #2323FC, #fc1231);\n  background-color: #40F5F5;\n}", ""]);
+exports.push([module.i, ".game__content {\n  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n  width: 100vw;\n  height: 100vh;\n  background-image: url(" + escape(__webpack_require__(140)) + ");\n  background-size: cover;\n}\n\n.img__square {\n  box-sizing: border-box;\n  width: 50%;\n  height: 50%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.answer__square {\n  box-sizing: border-box;\n  width: 60%;\n  height: 60%;\n  border: 1px solid white;\n  display: block;\n  margin: 0 auto;\n}\n\n.question {\n  width: 70%;\n  height: 70%;\n  background-image: url(" + escape(__webpack_require__(141)) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  position: relative;\n}\n\nbutton {\n  display: block;\n  padding: 1.2%;\n  width: 30%;\n  margin: 0 auto;\n  color: #F7F0F0;\n  border-radius: 12px 12px 12px 12px;\n  font-family: Comic Sans MS, serif;\n  font-size: 1.2REM;\n  box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;\n  background-image: linear-gradient(to top, #2323FC, #fc1231);\n  background-color: #40F5F5;\n}", ""]);
 
 // exports
 
