@@ -14,6 +14,7 @@ export class HighScores extends React.Component{
     render(){
         return(
             <div className={"highScores__content"}>
+                <p>Heare will be held best scores with names of their owners. Firebase will be used as a database</p>
                     {/*<h1>Our current Champ: {pierwsza.pozycja z Tabeli}</h1>*/}
                     <table>
                         <thead>

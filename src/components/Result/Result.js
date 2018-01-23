@@ -11,7 +11,7 @@ export class Result extends React.Component {
         return (
             <div className='resultContent'>
                 <div className='result'>
-                    <h1> Congratulations Your Score: {score}</h1>
+                    <p> Congratulations Your Score: </p>
                 </div>
                 <Footer/>
             </div>

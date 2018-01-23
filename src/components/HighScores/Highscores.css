@@ -1,0 +1,19 @@
+@import url("../../cssReset.css");
+.highScores__content {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: #333333;
+  background-image: url("./../../../img/arena7.jpg");
+  background-size: cover;
+  align-items: center; }
+  .highScores__content p {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    text-justify: auto; }
+
+table {
+  margin: 0 auto; }
+
+/*# sourceMappingURL=Highscores.css.map */

@@ -1,0 +1,35 @@
+.contact__content {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./../../../img/the-ball-stadion-horn-corner-47343.jpeg");
+  background-size: cover; }
+
+address {
+  box-sizing: border-box;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.22);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  border: 1px solid gray;
+  transition: 0.9s easy;
+  align-content: center; }
+  address:hover {
+    transition: 0.6s;
+    border: 2px solid white;
+    background-color: rgba(58, 58, 58, 0.95); }
+  address span, address a, address h1 {
+    color: white;
+    display: block;
+    margin-top: 10%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none; }
+    address span:hover, address a:hover, address h1:hover {
+      font-size: 110%;
+      color: greenyellow; }
+
+/*# sourceMappingURL=Contact.css.map */

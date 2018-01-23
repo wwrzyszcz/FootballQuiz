@@ -1,0 +1,63 @@
+/*
+Error: Invalid CSS after "  top:random + ": expected expression (e.g. 1px, bold), was "%;"
+        on line 33 of Game.scss
+
+28:   background-image: url('./../../../img/questionMark.jpg');
+29:   background-size: contain;
+30:   background-repeat: no-repeat;
+31:   background-position: center;
+32:   position: relative;
+33:   top:random + %;
+34:   left:random + %;
+35: }
+36: button{
+37:   display: block;
+38:   padding: 1.2%;
+
+Backtrace:
+Game.scss:33
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1179:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/script/lexer.rb:227:in `expected!'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:673:in `assert_expr'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:275:in `plus_or_minus'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:267:in `relational'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:267:in `eq_or_neq'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:267:in `and_expr'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:267:in `or_expr'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:462:in `space'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:408:in `interpolation'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:333:in `expr'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:671:in `assert_expr'
+/usr/lib/ruby/vendor_ruby/sass/script/parser.rb:63:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1041:in `sass_script'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:894:in `value!'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:767:in `block in try_declaration'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1155:in `rethrow'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:785:in `try_declaration'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:709:in `declaration_or_ruleset'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:674:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:655:in `block'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:647:in `ruleset'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:673:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:123:in `stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:39:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:403:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin.rb:82:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:359:in `watch_or_update'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:52:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:19:in `parse!'
+/usr/bin/scss:8:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  top:random + \": expected expression (e.g. 1px, bold), was \"%;\"\A         on line 33 of Game.scss\A \A 28:   background-image: url('./../../../img/questionMark.jpg');\A 29:   background-size: contain;\A 30:   background-repeat: no-repeat;\A 31:   background-position: center;\A 32:   position: relative;\A 33:   top:random + %;\A 34:   left:random + %;\A 35: }\A 36: button{\A 37:   display: block;\A 38:   padding: 1.2%;"; }

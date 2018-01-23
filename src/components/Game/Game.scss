@@ -23,25 +23,25 @@
   margin:0 auto;
 }
 .question {
-  width: 50%;
+  width: 70%;
   height: 50%;
   background-image: url('./../../../img/questionMark.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  top:random(50) + %;
-  left:random(50)+ %;
+  top:random + %;
+  left:random + %;
 }
 button{
   display: block;
-  padding: 1.5%;
+  padding: 1.2%;
   width:30%;
   margin:0 auto;
   color: #F7F0F0;
   border-radius: 12px 12px 12px 12px;
   font-family: Comic Sans MS, serif;
-  font-size: 1.5REM;
+  font-size: 1.2REM;
   box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
   background-image: linear-gradient(to top, #2323FC, #fc1231);
   background-color: #40F5F5;
